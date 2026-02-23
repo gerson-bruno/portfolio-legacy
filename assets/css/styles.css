@@ -356,7 +356,7 @@ img {
   margin-bottom: var(--mb-4);
 }
 
-/* ===== NOVO BLOCO DE ÍCONES ===== */
+/* ===== BLOCO DE ÍCONES ===== */
 .skills__icons {
   display: flex;
   flex-wrap: wrap;
@@ -385,7 +385,6 @@ img {
   overflow: hidden;
   width: 100%;
   display: block;
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
 }
 
 .skills__img-container img {
@@ -426,7 +425,7 @@ img {
 }
 
 .work__desc {
-  font-size: 0.65rem;
+  font-size: 0.85rem;
   color: var(--second-color);
   margin-top: 0.5rem;
 }
@@ -473,9 +472,22 @@ img {
 
 /* Copyright com fonte fina e pequena */
 .footer__copy {
-  font-size: 0.65rem; /* bem pequeno */
+  font-size: 0.75rem; /* bem pequeno */
   font-weight: 300; /* fonte fina */
   color: #fff;
+}
+
+/* ===== DARK MODE MENU MOBILE ===== */
+body.dark_mode .nav__menu {
+  background-color: #17171f; /* fundo escuro do menu */
+}
+
+body.dark_mode .nav__link {
+  color: #e4e4e7; /* letras do menu escuro */
+}
+
+body.dark_mode .nav__link:hover::after {
+  background-color: #4da6ff; /* destaque ao passar o mouse */
 }
 
 /* ===== MEDIA QUERIES (RESPONSIVIDADE) =====*/
@@ -597,15 +609,4 @@ img {
   }
 }
 
-/* ===== DARK MODE MENU MOBILE ===== */
-body.dark_mode .nav__menu {
-  background-color: #17171f; /* fundo escuro do menu */
-}
 
-body.dark_mode .nav__link {
-  color: #e4e4e7; /* letras do menu escuro */
-}
-
-body.dark_mode .nav__link:hover::after {
-  background-color: #4da6ff; /* destaque ao passar o mouse */
-}
