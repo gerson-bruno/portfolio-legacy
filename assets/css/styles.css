@@ -173,7 +173,19 @@ img {
 }
 .nav__logo {
   color: var(--second-color);
+  font-family: monospace;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: .8px;
+  font-weight: var(--font-semi);
 }
+
+.tag {
+  font-size: 1.5rem;
+  font-family: monospace;
+}
+
+
 .nav__toggle {
   color: var(--second-color);
   font-size: 1.5rem;
