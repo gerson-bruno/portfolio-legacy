@@ -31,22 +31,33 @@ navLink.forEach((n) =>
 
 /*===== LINKS ATIVOS =====*/
 const sections = document.querySelectorAll("section[id]");
-window.addEventListener("scroll", () => {
-  const scrollY = window.pageYOffset;
-  sections.forEach((current) => {
-    const sectionHeight = current.offsetHeight,
-      sectionTop = current.offsetTop - 58,
-      sectionId = current.getAttribute("id"),
-      sectionsClass = document.querySelector(
-        ".nav__menu a[href*=" + sectionId + "]",
-      );
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      sectionsClass.classList.add("active-link");
+const navLinks = document.querySelectorAll(".nav__link");
+
+function activateMenu() {
+  let scrollPos = window.scrollY + 70; // compensa header fixo
+
+  sections.forEach((section) => {
+    const top = section.offsetTop;
+    const bottom = top + section.offsetHeight;
+    const id = section.getAttribute("id");
+    const link = document.querySelector(`.nav__menu a[href="#${id}"]`);
+
+    if (scrollPos >= top && scrollPos < bottom) {
+      link.classList.add("active-link");
     } else {
-      sectionsClass.classList.remove("active-link");
+      link.classList.remove("active-link");
     }
   });
-});
+
+  // Força o contato se estivermos no final da página
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+    navLinks.forEach((link) => link.classList.remove("active-link"));
+    document.querySelector(`.nav__menu a[href="#contact"]`).classList.add("active-link");
+  }
+}
+
+window.addEventListener("scroll", activateMenu);
+window.addEventListener("load", activateMenu);
 
 /*===== COPYRIGHT AUTOMÁTICO =====*/
 document.querySelector(".footer p").textContent =

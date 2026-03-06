@@ -144,7 +144,7 @@ img {
   font-weight: var(--font-semi);
 }
 @media screen and (max-width: 767px) {
-  .nav__menu {
+.nav__menu {
     position: fixed;
     top: var(--header-height);
     right: -100%;
@@ -171,12 +171,13 @@ img {
   top: 2rem;
   background-color: var(--first-color);
 }
+
+
 .nav__logo {
   color: var(--second-color);
   font-family: monospace;
   font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: .8px;
+  letter-spacing: .3px;
   font-weight: var(--font-semi);
 }
 
@@ -453,6 +454,81 @@ img {
   text-decoration: underline;
 }
 
+
+/* tags das tecnologias */
+.work__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.work__tech span {
+  background: #e5e7eb;
+  color: #111827;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+/* modo escuro */
+body.dark_mode .work__tech span {
+  background: #2d2d35;
+  color: #e4e4e7;
+}
+
+/* ===== CONTATO ===== */
+#contact {
+  min-height: 78vh; 
+  padding: 7.5rem 0;
+}
+
+.contact__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+    justify-items: center;
+    text-align: center;
+}
+
+.contact__item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.contact__icon {
+    font-size: 1.8rem;
+    color: var(--first-color);
+    transition: color 0.3s;
+}
+
+.contact__item a {
+    color: var(--second-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.contact__item a:hover,
+.contact__item:hover .contact__icon {
+    color: var(--first-color);
+}
+
+/* DARK MODE */
+body.dark_mode .contact__icon {
+    color: #4da6ff;
+}
+
+body.dark_mode .contact__item a {
+    color: #e4e4e7;
+}
+
+
+
+
 /* ===== FOOTER =====*/
 
 .footer {
@@ -465,22 +541,6 @@ img {
   transition: background-color 0.3s ease;
 }
 
-.footer__social {
-  display: flex;
-  justify-content: center; /* centraliza os ícones */
-  gap: 1rem; /* espaço entre os ícones */
-  margin-bottom: var(--mb-4);
-}
-
-.footer__social-icon {
-  font-size: 1.5rem;
-  color: #fff;
-  transition: color 0.3s;
-}
-
-.footer__social-icon:hover {
-  color: var(--first-color);
-}
 
 /* Copyright com fonte fina e pequena */
 .footer__copy {
