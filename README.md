@@ -28,7 +28,7 @@ Este portfólio é **um projeto de estudo e prática**, focado em:
 
 ## 👀 Como visualizar
 
-Para conferir meu portfólio, [clique aqui 😎](https://gerson-bruno.github.io/portifolio/)  
+Para conferir meu portfólio, [clique aqui 😎](https://gerson-bruno.github.io/portfolio-legacy/)  
 
 ---
 
